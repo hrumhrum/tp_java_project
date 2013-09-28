@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timer</title>
+    <meta charset="utf-8">
+    <script>
+        function getClientTime(){
+            var currentClientTime = new Date();
+
+            var currentHours =  currentClientTime.getHours();
+            var currentMinutes = currentClientTime.getMinutes();
+            var currentSeconds = currentClientTime.getSeconds();
+            if (currentMinutes < 10) {currentMinutes = '0' + currentMinutes;}
+            if (currentSeconds < 10) {currentSeconds = '0' + currentSeconds;}
+            document.getElementById('client-time').innerHTML = currentHours+':'+currentMinutes+':'+currentSeconds;
+        }
+        function refresh() {
+            location.reload();
+        }
+    </script>
+</head>
+<body onload='setInterval(function(){refresh()}, ${refreshPeriod} ); getClientTime();'>
+<div>
+    Server time: ${serverTime}
+</div>
+<div>
+    Client time: <span id="client-time"></span>
+</div>
+</body>
+</html>

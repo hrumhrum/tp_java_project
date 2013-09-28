@@ -5,6 +5,7 @@
  * Time: 10:53
  * To change this template use File | Settings | File Templates.
  */
+package templater;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
