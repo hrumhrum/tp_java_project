@@ -19,6 +19,7 @@
         }
     </script>
 </head>
+
 <body onload='setInterval(function(){refresh()}, ${refreshPeriod} ); getClientTime();'>
 <div>
     Server time: ${serverTime}
